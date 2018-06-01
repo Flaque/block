@@ -8,10 +8,6 @@ distros, then this should likely be the case for you already.
 
 Block is more/less meant to be a one-way tool. If you want to remove something from your block list, you'll need to open up your `/etc/hosts` file and remove the line at the the end of the file yourself. There is no `unblock xyz.com`.
 
-## Installation
-
-
-
 ## Usage
 
 ```sh 
