@@ -14,6 +14,15 @@ Block is more/less meant to be a one-way tool. If you want to remove something f
 $ block distractingsite.com
 ```
 
+## Install
+
+```sh
+git clone https://github.com/Flaque/block.git;
+cd ./block;
+make;
+sudo mv ./bin/block /usr/local/bin/block;
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/flaque/block/fork )
