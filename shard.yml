@@ -1,0 +1,17 @@
+name: block
+version: 0.1.0
+
+authors:
+  - Flaque <econrad@zagmail.gonzaga.edu>
+
+targets:
+  block:
+    main: src/block.cr
+
+dependencies:
+  admiral:
+    github: jwaldrip/admiral.cr
+
+crystal: 0.24.2
+
+license: MIT
