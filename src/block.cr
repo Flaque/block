@@ -1,4 +1,3 @@
-require "./block/*"
 require "admiral"
 require "uri"
 require "file"
@@ -7,14 +6,14 @@ def removePrefix(str : String, prefix : String) : String
   return str.reverse.chomp(prefix.reverse).reverse
 end
 
-def addPrefix(str : String, prefix : String) : String 
+def addPrefix(str : String, prefix : String) : String
   return "#{prefix}#{str}"
 end
 
 def append(filename : String, str : String)
   if !File.exists? filename
     raise "Can't find #{filename} file."
-  end 
+  end
 
   content = File.read(filename)
   File.write(filename, "#{content}\n#{str}")
@@ -31,20 +30,20 @@ module Block
     define_help description: "Block websites via the /etc/hosts file."
 
     def run
-      if arguments.url.nil? 
-        puts help 
+      if arguments.url.nil?
+        puts help
         return
       end
 
       url = removePrefix arguments.url.to_s, "www."
       wwwUrl = "www.#{url}"
 
-      begin 
+      begin
         append("/etc/hosts", "#{blockFmt url}\n#{blockFmt wwwUrl}")
-      rescue e: Errno
+      rescue e : Errno
         puts e.message
         puts "You may need to use 'sudo block <website>'"
-      rescue e: Exception
+      rescue e : Exception
         puts e.message
       end
     end

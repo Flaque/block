@@ -1,7 +1,7 @@
 # block
 
 A little tool for automatically blocking websites and urls from the command line.
-It assumes there's a hostfile at `/etc/hosts`. If you're on macOS or most linux 
+It assumes there's a hostfile at `/etc/hosts`. If you're on macOS or most linux
 distros, then this should likely be the case for you already.
 
 ## Warning
@@ -10,7 +10,7 @@ Block is more/less meant to be a one-way tool. If you want to remove something f
 
 ## Usage
 
-```sh 
+```sh
 $ block distractingsite.com
 ```
 
@@ -20,7 +20,7 @@ $ block distractingsite.com
 git clone https://github.com/Flaque/block.git;
 cd ./block;
 make;
-sudo mv ./bin/block /usr/local/bin/block;
+sudo mv ./block /usr/local/bin/block;
 ```
 
 ## Contributing

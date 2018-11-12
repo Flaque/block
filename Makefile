@@ -1,2 +1,3 @@
 build:
-	crystal build src/block.cr -o bin/block
+	shards install
+	crystal build src/block.cr -o block
